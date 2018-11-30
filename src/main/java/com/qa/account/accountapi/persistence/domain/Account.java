@@ -1,4 +1,4 @@
-package com.qa.RealAccountConsumer.persistence.domain;
+package com.qa.account.accountapi.persistence.domain;
 
 public class Account {
 

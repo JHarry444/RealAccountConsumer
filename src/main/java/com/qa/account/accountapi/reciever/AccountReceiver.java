@@ -1,7 +1,7 @@
-package com.qa.RealAccountConsumer.reciever;
+package com.qa.account.accountapi.reciever;
 
-import com.qa.RealAccountConsumer.persistence.domain.Account;
-import com.qa.RealAccountConsumer.persistence.repository.MongoAccountRepo;
+import com.qa.account.accountapi.persistence.domain.Account;
+import com.qa.account.accountapi.persistence.repository.MongoAccountRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Component;
