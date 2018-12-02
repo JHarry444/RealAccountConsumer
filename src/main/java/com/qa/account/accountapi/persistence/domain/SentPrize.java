@@ -1,6 +1,6 @@
 package com.qa.account.accountapi.persistence.domain;
 
-public class Prize {
+public class SentPrize {
 
     private Long prizeId;
 
@@ -8,11 +8,11 @@ public class Prize {
 
     private String time;
 
-    public Prize() {
+    public SentPrize() {
 
     }
 
-    public Prize(Long prizeId, int prizeAmount, String time) {
+    public SentPrize(Long prizeId, int prizeAmount, String time) {
         this.prizeAmount = prizeAmount;
         this.time = time;
         this.prizeId = prizeId;

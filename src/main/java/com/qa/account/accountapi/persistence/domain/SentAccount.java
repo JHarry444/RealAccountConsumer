@@ -1,6 +1,6 @@
 package com.qa.account.accountapi.persistence.domain;
 
-public class Account {
+public class SentAccount {
 
     private Long accountId;
 
@@ -10,17 +10,17 @@ public class Account {
 
     private String accountNumber;
 
-    private Prize prize;
+    private SentPrize sentPrize;
 
-    public Account() {
+    public SentAccount() {
     }
 
-    public Account(Long accountId, String firstName, String lastName, String accountNumber, Prize prize) {
+    public SentAccount(Long accountId, String firstName, String lastName, String accountNumber, SentPrize sentPrize) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.accountNumber = accountNumber;
         this.accountId = accountId;
-        this.prize = prize;
+        this.sentPrize = sentPrize;
     }
 
     public Long getId() {
@@ -55,12 +55,12 @@ public class Account {
         this.accountNumber = accountNumber;
     }
 
-    public Prize getPrize() {
-        return prize;
+    public SentPrize getSentPrize() {
+        return sentPrize;
     }
 
-    public void setPrize(Prize prize) {
-        this.prize = prize;
+    public void setSentPrize(SentPrize sentPrize) {
+        this.sentPrize = sentPrize;
     }
 
 }
