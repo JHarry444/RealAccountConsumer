@@ -1,10 +1,11 @@
-package com.qa.account.accountapi.reciever;
+package com.qa.receiver;
 
-import com.qa.account.accountapi.persistence.domain.SentAccount;
-import com.qa.account.accountapi.persistence.repository.MongoAccountRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Component;
+
+import com.qa.repository.MongoAccountRepo;
+import com.qa.sender.Account;
 
 @Component
 public class AccountReceiver {
@@ -14,7 +15,7 @@ public class AccountReceiver {
     private MongoAccountRepo repo;
 
     @JmsListener(destination = "AccountQueue", containerFactory = "myFactory")
-    public void receiveMessage(SentAccount sentAccount) {
-        repo.save(sentAccount);
+    public void receiveMessage(Account account) {
+        repo.save(account);
     }
 }
